@@ -22,6 +22,7 @@ serviceAccount:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: ""
+  # The list of secrets mountable by this service account
   secrets: []
 
 rbac:
@@ -36,8 +37,11 @@ apiService:
   # manage it outside of this chart for e.g horizontal pod autoscaling to
   # work with this release.
   create: true
+  # Annotations to add to the API service
   annotations: {}
+  # Specifies whether to skip TLS verification
   insecureSkipTLSVerify: false
+  # The PEM encoded CA bundle for TLS verification
   caBundle: ""
 
 podLabels: {}
