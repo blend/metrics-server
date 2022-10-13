@@ -6,16 +6,23 @@ on:
       - release-*
     paths:
       - "charts/metrics-server/Chart.yaml"
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Git ref
+        required: false
+        default: master
 
 jobs:
   release:
-    if: github.repository == 'kubernetes-sigs/metrics-server'
+    if: github.repository == 'blend/metrics-server'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          ref: "${{ github.event.inputs.ref }}"
 
       - name: Configure Git
         run: |
