@@ -3,6 +3,38 @@ entries:
   metrics-server:
   - annotations:
       artifacthub.io/changes: |
+        - kind: added
+          description: "Allow configuring TLS on the APIService."
+        - kind: added
+          description: "Allow configuring mountable secrets on the service account."
+    apiVersion: v2
+    appVersion: 0.6.1
+    created: "2022-10-14T00:10:11.881588247Z"
+    description: Metrics Server is a scalable, efficient source of container resource
+      metrics for Kubernetes built-in autoscaling pipelines.
+    digest: f319f8079deef152cfc5468300804cb9084c0031486404ca9b9726f138dce048
+    home: https://github.com/kubernetes-sigs/metrics-server
+    icon: https://avatars.githubusercontent.com/u/36015203?s=400&v=4
+    keywords:
+    - kubernetes
+    - metrics-server
+    - metrics
+    maintainers:
+    - name: stevehipwell
+      url: https://github.com/stevehipwell
+    - name: krmichel
+      url: https://github.com/krmichel
+    - name: endrec
+      url: https://github.com/endrec
+    name: metrics-server
+    sources:
+    - https://github.com/kubernetes-sigs/metrics-server
+    type: application
+    urls:
+    - https://github.com/blend/metrics-server/releases/download/metrics-server-helm-chart-3.8.3/metrics-server-3.8.3.tgz
+    version: 3.8.3
+  - annotations:
+      artifacthub.io/changes: |
         - kind: changed
           description: "Allow probes to be turned off completly (this is not advised unless you know what you're doing)."
     apiVersion: v2
@@ -31,4 +63,4 @@ entries:
     urls:
     - https://github.com/blend/metrics-server/releases/download/metrics-server-helm-chart-3.8.2/metrics-server-3.8.2.tgz
     version: 3.8.2
-generated: "2022-10-14T00:08:12.415914438Z"
+generated: "2022-10-14T00:10:11.881604247Z"
