@@ -5,8 +5,8 @@ metadata:
   namespace: {{ .Release.Namespace }}
   labels:
     {{- include "metrics-server.labels" . | nindent 4 }}
-  {{- with .Values.annotations }}
-  annotations:
+  {{- with .Values.deploymentAnnotations }}
+  deploymentAnnotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:

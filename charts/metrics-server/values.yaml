@@ -142,4 +142,4 @@ affinity: {}
 topologySpreadConstraints: []
 
 # Annotations to add to the deployment
-annotations: {}
+deploymentAnnotations: {}
